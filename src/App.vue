@@ -9,7 +9,7 @@
     <img src="./assets/logo.png" class="logo" alt="로고입니다.">
   </div>
 
-  <ContainerBox></ContainerBox>
+  <ContainerBox :dataList = "dataList"></ContainerBox>
 
   <div class="footer">
     <ul class="footer-button-plus">
@@ -21,10 +21,16 @@
 
 <script>
 
+import blogData from './data';
 import ContainerBox from './components/Container.vue';
 
 export default {
   name: 'App',
+  data(){
+    return{
+      dataList : blogData,
+    }
+  },
   components: {
     ContainerBox: ContainerBox,
 
